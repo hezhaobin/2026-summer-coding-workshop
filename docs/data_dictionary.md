@@ -39,27 +39,14 @@ Canonical file: `input/interim/fungalrv_2011/kn-source-file-matches.tsv`
 This comparison is an import check only. KN feature values are not authoritative;
 features will be recalculated consistently from sequence.
 
-## Curated positive adhesin ID mapping
+## Curated positive adhesin ID matches
 
 Canonical file:
-`input/interim/curated-positive-adhesins/curated-positive-id-mapping.tsv`
+`input/interim/curated-positive-adhesins/curated-positive-id-matches.tsv`
 
 | Column | Meaning |
 | --- | --- |
-| `source_file` | Raw curated label-table filename. |
-| `source_row` | One-based spreadsheet row, including the header as row 1. |
 | `curated_id` | UniProt accession supplied in the curated table. |
-| `curated_name` | UniProt entry name supplied in the curated table. |
-| `curated_id_occurrences` | Number of appearances of this ID in the curated table. |
-| `match_status` | `exact-unique`, `unmatched`, or `ambiguous` accession match across the two reference proteomes. |
-| `name_check` | Whether the curated name exactly matches the resolved UniProt entry name. |
-| `matched_species` | Reference strain containing the resolved accession. |
-| `reference_proteome_id` | UniProt reference-proteome accession. |
-| `uniprot_accession` | Primary accession retained from the frozen FASTA header. |
-| `uniprot_entry_name` | Entry name retained from the frozen FASTA header. |
-| `gene_name` | Gene name retained from the frozen FASTA header, when present. |
-| `protein_description` | Protein description retained from the frozen FASTA header. |
-| `reference_fasta` | Frozen FASTA filename used for validation. |
-
-Accession matching determines whether an ID is resolved. The curated name is an
-independent consistency check and is not used as a replacement identifier.
+| `species` | Reference proteome containing the ID; blank if unresolved. |
+| `match_status` | `matched`, `unmatched`, or `ambiguous` across the two proteomes. |
+| `duplicate_in_curated_set` | Whether the ID appears more than once in the curated table. |

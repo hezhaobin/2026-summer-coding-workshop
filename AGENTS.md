@@ -102,8 +102,18 @@ This is an academic and pedagogical project, not a production software service. 
 - Write comments and docstrings that explain biological meaning, assumptions, units, and non-obvious decisions. Do not narrate self-evident syntax.
 - Test scientific correctness and the transformations most likely to fail. A few clear representative tests are preferable to exhaustive testing of implausible cases.
 - Refactor after actual duplication or confusion appears, not in anticipation of a future generalized system.
+- For a small one-time data check, prefer a short direct command and record the
+  conclusion. Create a permanent script only when the check must be rerun, feeds
+  a later pipeline stage, or produces a required reusable file. Do not add a
+  dedicated test for straightforward file inspection with no reusable logic.
 
 When safety, reproducibility, and simplicity pull in different directions, protect the raw data and scientific validity first, then choose the most readable solution. Briefly flag any case where a more complex design is genuinely necessary before implementing it.
+
+## Git workflow
+
+Create one commit after each meaningful, verified block of work. Keep unrelated
+changes in separate commits, use a concise descriptive commit message, and do not
+push unless explicitly asked.
 
 ## Naming conventions
 
