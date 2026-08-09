@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "source": "UniProt",
+  "source_help_url": "https://www.uniprot.org/help/proteome",
+  "frozen_release": "2026_02",
+  "uniprot_release_date": "10-June-2026",
+  "proteomes": [
+    {
+      "slug": "saccharomyces_cerevisiae_s288c",
+      "workshop_organism": "Saccharomyces cerevisiae",
+      "strain": "S288C",
+      "proteome_accession": "UP000002311",
+      "expected_taxon_id": 559292,
+      "expected_assembly_accession": "GCA_000146045.2",
+      "protein_count": 6067,
+      "fasta_sha256": "cd294d638d8b3b0cf01487a68b24f26c2d09b72d6e703414aaaf468dcb94dd43",
+      "metadata_sha256": "1427fd5c141480038d955f6a165944c1c56373b22b9f80cd3d54c0ca4e37c742"
+    },
+    {
+      "slug": "candida_albicans_sc5314",
+      "workshop_organism": "Candida albicans",
+      "strain": "SC5314",
+      "proteome_accession": "UP000000559",
+      "expected_taxon_id": 237561,
+      "expected_assembly_accession": "GCA_000182965.3",
+      "protein_count": 6036,
+      "fasta_sha256": "518a55bfe7d05e966d9a34b865b8bb3ca17001535076bccad84d65582a871c61",
+      "metadata_sha256": "915d240b34965e83cb68644a123e4732180565ddd6146996cc132c234e899eb4"
+    },
+    {
+      "slug": "candida_auris_b8441",
+      "workshop_organism": "Candida auris",
+      "strain": "B8441",
+      "proteome_accession": "UP000230249",
+      "expected_taxon_id": 498019,
+      "expected_assembly_accession": "GCA_002759435.3",
+      "protein_count": 5439,
+      "fasta_sha256": "51e7e7f1c00c27968711f5c53c1656cb95f4898d778c07b0711d1d54a3a3551d",
+      "metadata_sha256": "99629783873d4a092fb6148d8076859b7ca24b300eeb22d74f82fd80c5fe5127"
+    }
+  ]
+}

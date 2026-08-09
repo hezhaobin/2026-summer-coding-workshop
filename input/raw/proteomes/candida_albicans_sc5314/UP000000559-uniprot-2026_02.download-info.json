@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "script": "script/download_proteomes.py",
+  "script_version": "1.0.0",
+  "config_sha256": "4b76be27ccca655b96f848ab4d3eefd746310ef8e1fce3dfbf6b618fd23acb51",
+  "downloaded_at_utc": "2026-08-08T16:38:48.759293+00:00",
+  "source": "UniProt REST API",
+  "proteome_accession": "UP000000559",
+  "workshop_organism": "Candida albicans",
+  "strain": "SC5314",
+  "uniprot_scientific_name": "Candida albicans (strain SC5314 / ATCC MYA-2876)",
+  "uniprot_taxon_id": 237561,
+  "proteome_type": "Reference proteome",
+  "proteome_modified": "2025-12-05",
+  "genome_assembly_accession": "GCA_000182965.3",
+  "uniprot_release": "2026_02",
+  "uniprot_release_date": "10-June-2026",
+  "metadata_url": "https://rest.uniprot.org/proteomes/UP000000559",
+  "fasta_url": "https://rest.uniprot.org/uniprotkb/stream?format=fasta&query=%28proteome%3AUP000000559%29",
+  "fasta_inventory": {
+    "record_count": 6036,
+    "unique_accession_count": 6036,
+    "total_residues": 2982003
+  },
+  "files": [
+    {
+      "role": "proteome_fasta",
+      "filename": "UP000000559-uniprot-2026_02.fasta",
+      "bytes": 3903783,
+      "sha256": "518a55bfe7d05e966d9a34b865b8bb3ca17001535076bccad84d65582a871c61"
+    },
+    {
+      "role": "proteome_metadata",
+      "filename": "UP000000559-uniprot-2026_02.proteome.json",
+      "bytes": 7758,
+      "sha256": "915d240b34965e83cb68644a123e4732180565ddd6146996cc132c234e899eb4"
+    }
+  ]
+}
