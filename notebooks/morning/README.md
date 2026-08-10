@@ -13,4 +13,13 @@ The paired notebooks implement the morning portion of
 `../../docs/notebook-00-instructor-complete-plan.md`. The instructor version
 contains complete solutions and expected outputs. The student version preserves
 the same exercise order while replacing solution code with starter functions and
-behavior-based checks.
+collapsed behavior-based checks.
+
+Both notebooks use the same provided infrastructure to prepare pinned Biopython,
+download the frozen SC5314 proteome from the student-facing `main` branch, verify
+its SHA-256 checksum, and parse it with `Bio.SeqIO`. Manual upload remains the
+network-failure fallback.
+
+Both notebooks have been executed from top to bottom in clean local Jupyter
+kernels. The student copy contains no solution implementations or stored feature
+answers.

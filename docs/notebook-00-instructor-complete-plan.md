@@ -1,6 +1,7 @@
 # Plan for `00_instructor_complete`
 
-Status: notebook design plan, 2026-08-09
+Status: morning notebooks minimally implemented and verified, 2026-08-10;
+afternoon notebook remains planned and is outside the current implementation scope
 
 The complete instructor handout is split into two self-contained Colab notebooks:
 

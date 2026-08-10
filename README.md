@@ -10,7 +10,7 @@ The workshop follows this progression:
 
 - Read `AGENTS.md` before making project changes.
 - Read `docs/workshop_plan.md` for the authoritative teaching plan.
-- Record scientific definitions and column meanings in `docs/data_dictionary.md` when it is created.
+- Record scientific definitions and column meanings in `docs/data_dictionary.md`.
 - Run data preparation through scripts; do not edit raw or derived tables manually.
 
 ## Repository map
@@ -37,9 +37,12 @@ Raw data are never edited in place. Interim, processed, and output files must be
 ## Current status
 
 The three reference-proteome accessions are confirmed and UniProt release
-`2026_02` has been frozen locally with checksums and source metadata. Screening
-thresholds, negative-set source and curation rules, and optional TANGO/XSTREAM settings still
-require confirmation. See `docs/workshop_plan.md` for the complete decision list.
+`2026_02` has been frozen with checksums and source metadata. The morning
+instructor and student notebooks are implemented and verified. Screening
+thresholds, negative-set source and curation rules, and optional TANGO/XSTREAM
+settings still require confirmation. See `docs/workshop_plan.md` for the complete
+decision list.
 
-The repository has been initialized but has no commits yet. Decide how large
-proteome and tool-output files will be managed before committing the raw FASTAs.
+The `dev` branch is the complete development and instructor source. The
+independent `main` branch is the student distribution and contains only its
+README, the morning student notebook, and the three frozen proteome FASTAs.
