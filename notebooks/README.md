@@ -4,7 +4,7 @@ Google Colab materials distributed to students and instructors. The notebooks ar
 
 ## Organization
 
-- `morning/00_instructor_complete.ipynb`: planned complete instructor notebook for 9:30 a.m.–12:30 p.m.
+- `morning/00_instructor_complete.ipynb`: minimal complete instructor notebook for 9:30 a.m.–12:30 p.m.; this is the current implementation focus.
 - `afternoon/00_instructor_complete.ipynb`: planned complete instructor notebook for 1:15–4:30 p.m.
 - `../docs/notebook-00-instructor-complete-plan.md`: cell-level content and build plan for both halves.
 
