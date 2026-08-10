@@ -1,6 +1,6 @@
 # Python in Biology Workshop: revised plan
 
-Status: working specification, revised 2026-08-08
+Status: working specification, revised 2026-08-09
 
 Planning source: ChatGPT task “Python in Biology Workshop” (`6a637d4e-ff88-83ea-a671-c3a1bdc7bd57`) plus the 2026-08-08 feature and machine-learning revisions.
 
@@ -75,33 +75,33 @@ The target day is 9:30 a.m.–4:30 p.m., with 45 minutes for lunch and two 15-mi
 
 Cover fungal adhesin function, why adhesins matter, canonical architecture, secretion signal, adhesive/effector domain, S/T-rich stalk, tandem repeats, C-terminal GPI-anchor signal, prediction difficulty, and FungalRV as an existing predictor. Use the final five minutes for the schedule.
 
-### 10:00–10:15 — Examine example proteins
+### 10:00–10:30 — Examine example proteins and use prediction servers
 
-Compare a known adhesin, a non-adhesin cell-wall protein, and a cytoplasmic protein. Ask students what evidence suggests localization and what might be specific to adhesion.
+Compare *Candida albicans* ALS1, a known adhesin, with PHO84, a plasma-membrane phosphate transporter. Students first inspect the sequences and predict what they expect to find. They then submit the embedded sequences to the SignalP 6.0 server, using the Eukarya setting, and interpret the predicted class, probability, and cleavage site when present.
 
-### 10:15–11:15 — Python refresher and Challenge 1A
+Students next use NetGPI 1.1 to evaluate appropriate secretory-pathway candidates and interpret the GPI-anchor call and predicted omega site. Explicitly teach that NetGPI assumes prior evidence for entry into the secretory pathway; a result should not be interpreted independently of SignalP or equivalent evidence. The notebook contains the server URLs, complete FASTA sequences, step-by-step submission settings, result-recording questions, and backup result examples in case the live services are unavailable.
+
+### 10:30–11:30 — Python refresher and Challenge 1A
 
 Review strings, `len`, `.count`, functions, return values, loops, lists, and testing. Students write and test a whole-protein S/T-frequency function using a tiny sequence with a manually known answer, then apply it to two query proteins.
 
-### 11:15–11:30 — Break
+### 11:30–11:45 — Break
 
-### 11:30–12:15 — Sliding windows and connection to a dataset
+### 11:45–12:30 — Sliding windows and connection to a dataset
 
 Develop the sliding-window algorithm first in words or pseudocode. Students complete a scaffolded function for maximum local S/T frequency. Less experienced students may switch to a supplied implementation after attempting the logic. Demonstrate, rather than require, how a dataframe applies the function to many proteins and how supplied plotting code compares groups.
 
-If web services are included, use only a short guided SignalP/GPI-prediction demonstration with one sequence. Precomputed workshop data remain authoritative.
+### 12:30–1:15 — Lunch
 
-### 12:15–1:00 — Lunch
-
-### 1:00–1:25 — From biological rules to one decision tree
+### 1:15–1:35 — From biological rules to one decision tree
 
 Begin with a human-readable rule and introduce features, labels, branches, leaves, training examples, predictions, and overfitting. Use a short external video excerpt only if it directly supports this explanation.
 
-### 1:25–1:50 — Guided toy-tree demonstration
+### 1:35–1:55 — Guided toy-tree demonstration
 
 The instructor runs a fixed shallow tree using SignalP score and the PredGPI binary call. Contrast its output with an all-negative classifier. Explain the confusion matrix, precision, recall, and F1 score in the context of an imbalanced positive/negative dataset. Keep FungalRV out of the model and reveal it afterward as a comparison.
 
-### 1:50–2:20 — Everyone runs and interprets the same model
+### 1:55–2:20 — Everyone runs and interprets the same model
 
 Students execute supplied model code, trace example proteins through the tree, identify one correct and one incorrect prediction, and answer interpretation questions. They do not tune depth, compare algorithms, or compete on scores.
 
@@ -136,13 +136,14 @@ Discuss false positives such as other GPI-anchored cell-wall proteins, data leak
 
 ## Notebook set
 
-Prepare paired student and instructor-solution notebooks:
+Prepare the complete instructor handout as two self-contained notebooks:
 
-1. `01_sequence_features_student.ipynb` and solution: notebook orientation, tiny tests, length, whole S/T, sliding windows, group comparison.
-2. `02_decision_tree_student.ipynb` and solution: one fixed shallow SignalP/PredGPI tree, all-negative baseline, confusion matrix, precision, recall, F1, and error interpretation.
-3. `03_candidate_challenge_student.ipynb` and solution: addition of length and S/T features, optional TANGO/XSTREAM comparison, and guided *C. auris* candidate interpretation.
+1. `notebooks/morning/00_instructor_complete.ipynb`: notebook orientation; adhesin background; ALS1/PHO84 comparison; guided SignalP and NetGPI submissions; Python refresher; whole-protein S/T frequency; sliding windows; and a supplied dataframe/plotting bridge.
+2. `notebooks/afternoon/00_instructor_complete.ipynb`: recap and independent setup; biological rules and decision trees; one fixed SignalP/PredGPI tree; the all-negative baseline; confusion matrix, precision, recall, and F1; addition of length and S/T features; optional TANGO/XSTREAM comparison; *C. auris* candidate interpretation; and final synthesis.
 
-Provide data-loading, BioPython/Pandas, plotting, splitting/cross-validation, and scikit-learn syntax. Students should write or complete the biologically meaningful sequence functions and interpretation answers.
+Each notebook serves as both activity guide and durable handout. Background, instructions, settings, interpretation questions, definitions, and recovery steps must be understandable without relying on the instructor's spoken explanation. Each half must run independently from a clean Colab runtime and must not rely on notebook state from the other half.
+
+Student versions will be derived from the complete instructor notebooks after the instructor workflow is verified. Provide data-loading, BioPython/Pandas, plotting, splitting/cross-validation, and scikit-learn syntax. Students should write or complete the biologically meaningful sequence functions and interpretation answers.
 
 ## Decisions still required
 
