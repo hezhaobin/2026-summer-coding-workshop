@@ -111,9 +111,12 @@ When safety, reproducibility, and simplicity pull in different directions, prote
 
 ## Git workflow
 
-Create one commit after each meaningful, verified block of work. Keep unrelated
-changes in separate commits, use a concise descriptive commit message, and do not
-push unless explicitly asked.
+Prepare one commit after each meaningful, verified block of work. Keep unrelated
+changes in separate commits and propose a concise descriptive commit message.
+Before running every `git commit`, summarize the files to be included and the
+verification performed, then ask the user for explicit approval. A general request
+to implement or finish work is not commit approval. Do not push unless explicitly
+asked.
 
 ## Naming conventions
 
