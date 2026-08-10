@@ -4,7 +4,8 @@ Google Colab materials distributed to students and instructors. The notebooks ar
 
 ## Organization
 
-- `morning/00_instructor_complete.ipynb`: minimal complete instructor notebook for 9:30 a.m.–12:30 p.m.; this is the current implementation focus.
+- `morning/00_instructor_complete.ipynb`: minimal complete instructor notebook for 9:30 a.m.–12:30 p.m.; maintained on the development branch.
+- `morning/python-in-biology-morning.ipynb`: paired student notebook intended for the student-facing `main` branch.
 - `afternoon/00_instructor_complete.ipynb`: planned complete instructor notebook for 1:15–4:30 p.m.
 - `../docs/notebook-00-instructor-complete-plan.md`: cell-level content and build plan for both halves.
 
@@ -12,7 +13,10 @@ Each half is self-contained and must run from top to bottom in a clean Colab run
 
 ## Instructor-first workflow
 
-Build and verify the complete instructor notebooks first. Derive student versions only after the explanations, exercises, expected results, and timing are stable.
+Build and verify the complete instructor notebook first, then derive the student
+version with synchronized exercise identifiers and cell order. The instructor
+version retains solutions and expected outputs; the student version retains
+starter functions and behavior-based checks without solution code.
 
 Every student exercise requires a synchronized instructor solution and a deterministic behavioral test. Student notebooks must not contain answer code in cells, comments, outputs, metadata, or collapsed content.
 
