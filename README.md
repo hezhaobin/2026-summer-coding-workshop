@@ -11,8 +11,9 @@ Student materials for the morning half of the fungal-adhesin Python workshop.
 3. Run the notebook from top to bottom.
 4. Read each prediction prompt before running the next cell.
 
-The notebook contains the two example protein sequences needed for the core
-coding exercises. No live protein download is required.
+The notebook contains the two example protein sequences needed for the first
+coding exercises. Later, provided code loads frozen workshop files directly
+from this repository; students do not need to query UniProt during class.
 
 ## Prediction-server backup
 
@@ -24,13 +25,19 @@ ALS1 and PHO84 sequences embedded in the notebook.
 ## Frozen proteome files
 
 The three workshop proteomes are stored under `input/raw/proteomes/`. The
-notebook's provided setup code downloads the required frozen file from this
-repository into the Colab runtime, verifies its SHA-256 checksum, and then reads
-it with Biopython.
+morning notebook downloads the frozen *S. cerevisiae* S288C and *C. albicans*
+SC5314 FASTA files, verifies their SHA-256 checksums, and reads them with
+Biopython. It also downloads `input/processed/morning-known-adhesins.tsv`, an
+answer-free table containing the 30 validated KN known-adhesin IDs, names, and
+species.
 
-If GitHub cannot be reached during class, download the required FASTA before the
-workshop or use the instructor's backup copy. Upload it with Colab's **Files**
-panel when prompted.
+If GitHub cannot be reached during class, use the instructor's backup copies and
+upload these three files with Colab's **Files** panel before running the loading
+cell:
+
+- `UP000002311-uniprot-2026_02.fasta`
+- `UP000000559-uniprot-2026_02.fasta`
+- `morning-known-adhesins.tsv`
 
 ## If something goes wrong
 
@@ -38,6 +45,6 @@ panel when prompted.
   from the top.
 - If a prediction server is unavailable, use the linked saved demo results to
   complete the interpretation questions, then continue with the coding exercises.
-- If a GitHub data download fails, upload the instructor-provided frozen FASTA
-  through Colab's **Files** panel and rerun the loading cell.
+- If a GitHub data download fails, upload the three instructor-provided files
+  listed above and rerun the loading cell.
 - If your edits are lost, reopen this repository and save a new Drive copy.
