@@ -14,6 +14,13 @@ Student materials for the morning half of the fungal-adhesin Python workshop.
 The notebook contains the two example protein sequences needed for the core
 coding exercises. No live protein download is required.
 
+## Prediction-server backup
+
+The SignalP and NetGPI activities normally use the live DTU servers. If either
+service is unavailable, open the [saved demo results](docs/demo-predictor-results.md)
+when instructed. The backup contains the result tables and plots for the same
+ALS1 and PHO84 sequences embedded in the notebook.
+
 ## Frozen proteome files
 
 The three workshop proteomes are stored under `input/raw/proteomes/`. The
@@ -29,8 +36,8 @@ panel when prompted.
 
 - If cells were run out of order, choose **Runtime → Restart session**, then run
   from the top.
-- If a prediction server is unavailable, continue with the coding exercises;
-  the instructor will provide a saved result for interpretation.
+- If a prediction server is unavailable, use the linked saved demo results to
+  complete the interpretation questions, then continue with the coding exercises.
 - If a GitHub data download fails, upload the instructor-provided frozen FASTA
   through Colab's **Files** panel and rerun the loading cell.
 - If your edits are lost, reopen this repository and save a new Drive copy.
