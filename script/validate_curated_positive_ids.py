@@ -16,6 +16,7 @@ PROTEOMES = {
 }
 OUTPUT_FILE = ROOT / "input/interim/curated-positive-adhesins"
 OUTPUT_FILE = OUTPUT_FILE / "curated-positive-id-matches.tsv"
+STUDENT_OUTPUT_FILE = ROOT / "input/processed/morning-known-adhesins.tsv"
 
 
 def read_uniprot_ids(fasta_file):
@@ -67,3 +68,37 @@ for species in PROTEOMES:
 print(f"Unmatched: {status_counts['unmatched']}")
 print(f"Ambiguous: {status_counts['ambiguous']}")
 print(f"Duplicated curated IDs: {sum(count > 1 for count in id_counts.values())}")
+
+has_unresolved_ids = status_counts["unmatched"] > 0 or status_counts["ambiguous"] > 0
+has_duplicate_ids = any(count > 1 for count in id_counts.values())
+if has_unresolved_ids or has_duplicate_ids:
+    raise ValueError(
+        "Student known-adhesin IDs were not written because curated IDs are unresolved or duplicated."
+    )
+
+student_species_names = {
+    "S. cerevisiae": "Saccharomyces cerevisiae",
+    "C. albicans": "Candida albicans",
+}
+student_rows = []
+for curated_row, result in zip(curated_rows, results):
+    student_rows.append(
+        {
+            "protein_id": curated_row["ID"],
+            "protein_name": curated_row["Name"],
+            "species": student_species_names[result["species"]],
+        }
+    )
+
+STUDENT_OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+with STUDENT_OUTPUT_FILE.open("w", newline="") as handle:
+    writer = csv.DictWriter(
+        handle,
+        fieldnames=student_rows[0],
+        delimiter="\t",
+        lineterminator="\n",
+    )
+    writer.writeheader()
+    writer.writerows(student_rows)
+
+print(f"Wrote {len(student_rows)} student known-adhesin IDs")

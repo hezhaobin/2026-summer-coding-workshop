@@ -83,13 +83,13 @@ Students next use NetGPI 1.1 to evaluate appropriate secretory-pathway candidate
 
 ### 10:30–11:30 — Python refresher and Challenge 1A
 
-Review strings, `len`, `.count`, functions, return values, loops, lists, and testing. Students write and test a whole-protein S/T-frequency function using a tiny sequence with a manually known answer, then apply it to two query proteins.
+Begin from the for-loop knowledge shared by the class rather than assuming string methods. Students first write and test a two-input function that counts one letter in a word using a loop. They use it to calculate whole-protein S/T frequency for ALS1 and PHO84, compare the values, and inspect ALS1 by eye for uneven S/T distribution. Introduce the string `.count()` method only after this loop-based foundation.
 
 ### 11:30–11:45 — Break
 
 ### 11:45–12:30 — Sliding windows and connection to a dataset
 
-Develop the sliding-window algorithm first in words or pseudocode. Students complete a scaffolded function for maximum local S/T frequency. Less experienced students may switch to a supplied implementation after attempting the logic. Demonstrate, rather than require, how a dataframe applies the function to many proteins and how supplied plotting code compares groups.
+Develop the sliding-window algorithm first in words or pseudocode. Students complete a scaffolded function that returns an ordered list of S/T frequencies for every overlapping window; they may use either `.count()` or their loop-based counting function. A visible global variable stores the 50-residue teaching window. Supplied code plots each list against window-midpoint protein positions for ALS1 and PHO84. Students then use `max()` to report maximum local S/T frequency. Provided infrastructure loads and combines the frozen *S. cerevisiae* and *C. albicans* proteomes, applies the student functions, and compares the 30 validated KN known adhesins with the entire combined proteome.
 
 ### 12:30–1:15 — Lunch
 

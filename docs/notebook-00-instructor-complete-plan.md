@@ -108,11 +108,14 @@ Include instructor-captured result summaries or screenshots generated shortly be
 
 ### 4. Python refresher and whole-protein S/T frequency — 10:30–11:30
 
-- Review strings, variables, `len`, `.count`, simple functions, return values, and readable loops.
-- Start with a tiny manually checkable protein string.
-- Students predict length and S/T count before running code.
-- Build and test `st_frequency(sequence)`.
-- Apply the function to ALS1 and PHO84.
+- Begin with readable `for` loops, which all students encountered in CodeHS;
+  do not assume prior knowledge of string methods.
+- Students write and test `count_occurrences(word, letter)` using only a loop,
+  a conditional, and a counter variable.
+- Build `st_frequency(sequence)` from the loop-based counting function and apply
+  it to ALS1 and PHO84.
+- Compare the whole-protein results, then inspect ALS1 by eye for where S/T
+  residues cluster. Introduce the string `.count()` method at this transition.
 - Add a zero-length guard only if it can be explained simply; do not turn the exercise into defensive-programming instruction.
 - Compare results and connect composition back to adhesin architecture.
 
@@ -125,15 +128,23 @@ Place a clear stopping banner and the next restart point in Markdown.
 - Motivate why a local S/T-rich region can be hidden by a whole-protein average.
 - Develop the algorithm in pseudocode.
 - Visualize the first two or three overlapping windows before generalizing.
-- Complete a scaffolded `max_st_frequency_window(sequence, window_size=50)` function.
-- Define the short-sequence behavior explicitly and simply.
-- Test with a tiny sequence before applying to ALS1 and PHO84.
+- Complete a scaffolded `sliding_st_frequencies(sequence, window_size)` function.
+- Specify that it returns an ordered list with one frequency per overlapping
+  window; item `i` corresponds to the window starting at index `i`.
+- Define the empty- and short-sequence behavior explicitly and simply.
+- Keep `WINDOW_SIZE = 50` visible and global so the class can vary it later.
+- Use supplied code to plot the list against window-midpoint protein positions
+  for ALS1 and PHO84, then report the maximum with `max()`.
 
 ### 7. From two proteins to a table — 12:15–12:30
 
-- Use provided code to create or load a small dataframe.
-- Demonstrate applying student-written functions across protein rows.
-- Run a supplied plot comparing known groups.
+- Use provided code to download, verify, parse, and combine the frozen
+  *S. cerevisiae* and *C. albicans* proteomes.
+- Apply the student-written functions to all 12,103 proteins and collect protein
+  length, whole-protein S/T frequency, and maximum 50-residue-window S/T
+  frequency.
+- Load the student-safe ID-only view of the 30 validated KN curated positives
+  and plot the known-adhesin subset against the entire combined proteome.
 - Ask students to state one observed pattern and one reason it is not a perfect rule.
 - End with a morning summary and a clean handoff to the afternoon question: can a decision tree combine evidence?
 

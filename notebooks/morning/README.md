@@ -7,7 +7,10 @@ Current files:
 
 Workshop time: 9:30 a.m.–12:30 p.m.
 
-Contents: orientation, adhesin biology, ALS1/PHO84 comparison, guided SignalP and NetGPI submissions, Python refresher, whole-protein S/T frequency, sliding-window S/T frequency, and a supplied dataframe/plotting bridge.
+Contents: orientation, adhesin biology, ALS1/PHO84 comparison, guided SignalP
+and NetGPI submissions, loop-based residue counting, whole-protein S/T
+frequency, sliding-window profiles, and a supplied two-proteome comparison of
+known adhesins with all proteins.
 
 The paired notebooks implement the morning portion of
 `../../docs/notebook-00-instructor-complete-plan.md`. The instructor version
@@ -15,10 +18,12 @@ contains complete solutions and expected outputs. The student version preserves
 the same exercise order while replacing solution code with starter functions and
 collapsed behavior-based checks.
 
-Both notebooks use the same provided infrastructure to prepare pinned Biopython,
-download the frozen SC5314 proteome from the student-facing `main` branch, verify
-its SHA-256 checksum, and parse it with `Bio.SeqIO`. Manual upload remains the
-network-failure fallback.
+Both notebooks use provided infrastructure to prepare pinned Biopython, load the
+frozen *S. cerevisiae* S288C and *C. albicans* SC5314 proteomes plus the validated
+KN known-adhesin IDs, verify SHA-256 checksums, and parse the FASTA records with
+`Bio.SeqIO`. The instructor copy downloads from `dev`; the student copy downloads
+from the student-facing `main` branch. Repository files are used directly during
+local execution.
 
 Both notebooks have been executed from top to bottom in clean local Jupyter
 kernels. The student copy contains no solution implementations or stored feature

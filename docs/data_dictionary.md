@@ -50,3 +50,27 @@ Canonical file:
 | `species` | Reference proteome containing the ID; blank if unresolved. |
 | `match_status` | `matched`, `unmatched`, or `ambiguous` across the two proteomes. |
 | `duplicate_in_curated_set` | Whether the ID appears more than once in the curated table. |
+
+## Morning known-adhesin IDs
+
+Canonical file: `input/processed/morning-known-adhesins.tsv`
+
+This student-safe table is generated only after every KN curated positive ID
+matches exactly one of the frozen *S. cerevisiae* or *C. albicans* proteomes and
+no curated ID is duplicated. Precomputed KN feature values are intentionally
+excluded.
+
+| Column | Meaning |
+| --- | --- |
+| `protein_id` | Validated UniProt accession in a frozen workshop proteome. |
+| `protein_name` | Protein name retained from the KN curated positive table. |
+| `species` | Full species name for the matched frozen proteome. |
+
+## Sequence-derived teaching features
+
+| Feature | Definition and behavior |
+| --- | --- |
+| `protein_length` | Number of amino-acid residues in the sequence. |
+| `st_frequency` | `(count(S) + count(T)) / protein_length`; an empty sequence is missing (`None`), and every non-S/T residue remains in the denominator. |
+| `sliding_st_frequencies` | Ordered list of S/T fractions for every overlapping window, moving one residue at a time. List item `i` describes the window beginning at zero-based position `i`. An empty sequence returns `[]`; a sequence no longer than the window returns one whole-sequence value. |
+| `max_st_frequency_window` | Maximum value in `sliding_st_frequencies`; missing (`None`) for an empty sequence. The teaching window is controlled by `WINDOW_SIZE` and defaults to 50 residues. |
