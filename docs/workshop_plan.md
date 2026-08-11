@@ -77,19 +77,19 @@ Cover fungal adhesin function, why adhesins matter, canonical architecture, secr
 
 ### 10:00–10:30 — Examine example proteins and use prediction servers
 
-Compare *Candida albicans* ALS1, a known adhesin, with PHO84, a plasma-membrane phosphate transporter. Students first inspect the sequences and predict what they expect to find. They then submit the embedded sequences to the SignalP 6.0 server, using the Eukarya setting, and interpret the predicted class, probability, and cleavage site when present.
+Compare *Candida albicans* Als1p, a known adhesin, with Pho84p, a plasma-membrane phosphate transporter. Students first inspect the sequences and predict what they expect to find. They then submit the embedded sequences to the SignalP 6.0 server, using the Eukarya setting, and interpret the predicted class, probability, and cleavage site when present.
 
 Students next use NetGPI 1.1 to evaluate appropriate secretory-pathway candidates and interpret the GPI-anchor call and predicted omega site. Explicitly teach that NetGPI assumes prior evidence for entry into the secretory pathway; a result should not be interpreted independently of SignalP or equivalent evidence. The notebook contains the server URLs, complete FASTA sequences, step-by-step submission settings, result-recording questions, and backup result examples in case the live services are unavailable.
 
 ### 10:30–11:30 — Python refresher and Challenge 1A
 
-Begin from the for-loop knowledge shared by the class rather than assuming string methods. Students first write and test a two-input function that counts one letter in a word using a loop. They use it to calculate whole-protein S/T frequency for ALS1 and PHO84, compare the values, and inspect ALS1 by eye for uneven S/T distribution. Introduce the string `.count()` method only after this loop-based foundation.
+Begin from the for-loop knowledge shared by the class rather than assuming string methods. Students first write and test a two-input function that counts one letter in a word using a loop. They use it to calculate whole-protein S/T frequency for Als1p and Pho84p, compare the values, and inspect Als1p by eye for uneven S/T distribution. Introduce the string `.count()` method only after this loop-based foundation.
 
 ### 11:30–11:45 — Break
 
 ### 11:45–12:30 — Sliding windows and connection to a dataset
 
-Develop the sliding-window algorithm first in words or pseudocode. Students complete a scaffolded function that returns an ordered list of S/T frequencies for every overlapping window; they may use either `.count()` or their loop-based counting function. A visible global variable stores the 50-residue teaching window. Supplied code plots each list against window-midpoint protein positions for ALS1 and PHO84. Students then use `max()` to report maximum local S/T frequency. Provided infrastructure loads and combines the frozen *S. cerevisiae* and *C. albicans* proteomes, applies the student functions, and compares the 30 validated KN known adhesins with the entire combined proteome.
+Develop the sliding-window algorithm first in words or pseudocode. Students complete a scaffolded function that returns an ordered list of S/T frequencies for every overlapping window; they may use either `.count()` or their loop-based counting function. A visible global variable stores the 50-residue teaching window. Supplied code plots each list against window-midpoint protein positions for Als1p and Pho84p. Students then use `max()` to report maximum local S/T frequency. Provided infrastructure loads and combines the frozen *S. cerevisiae* and *C. albicans* proteomes. Students complete a scaffolded loop that applies their whole-protein and sliding-window functions to all proteins; provided checks and plotting code then compare the 30 validated KN known adhesins with the entire combined proteome.
 
 ### 12:30–1:15 — Lunch
 
@@ -138,7 +138,7 @@ Discuss false positives such as other GPI-anchored cell-wall proteins, data leak
 
 Prepare the complete instructor handout as two self-contained notebooks:
 
-1. `notebooks/morning/00_instructor_complete.ipynb`: notebook orientation; adhesin background; ALS1/PHO84 comparison; guided SignalP and NetGPI submissions; Python refresher; whole-protein S/T frequency; sliding windows; and a supplied dataframe/plotting bridge.
+1. `notebooks/morning/00_instructor_complete.ipynb`: notebook orientation; adhesin background; Als1p/Pho84p comparison; guided SignalP and NetGPI submissions; Python refresher; whole-protein S/T frequency; sliding windows; and a scaffolded proteome-application exercise with supplied validation and plotting.
 2. `notebooks/afternoon/00_instructor_complete.ipynb`: recap and independent setup; biological rules and decision trees; one fixed SignalP/PredGPI tree; the all-negative baseline; confusion matrix, precision, recall, and F1; addition of length and S/T features; optional TANGO/XSTREAM comparison; *C. auris* candidate interpretation; and final synthesis.
 
 Each notebook serves as both activity guide and durable handout. Background, instructions, settings, interpretation questions, definitions, and recovery steps must be understandable without relying on the instructor's spoken explanation. Each half must run independently from a clean Colab runtime and must not rely on notebook state from the other half.

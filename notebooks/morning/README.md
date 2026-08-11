@@ -7,7 +7,7 @@ Current files:
 
 Workshop time: 9:30 a.m.–12:30 p.m.
 
-Contents: orientation, adhesin biology, ALS1/PHO84 comparison, guided SignalP
+Contents: orientation, adhesin biology, Als1p/Pho84p comparison, guided SignalP
 and NetGPI submissions, loop-based residue counting, whole-protein S/T
 frequency, sliding-window profiles, and a supplied two-proteome comparison of
 known adhesins with all proteins.
@@ -23,7 +23,9 @@ frozen *S. cerevisiae* S288C and *C. albicans* SC5314 proteomes plus the validat
 KN known-adhesin IDs, verify SHA-256 checksums, and parse the FASTA records with
 `Bio.SeqIO`. The instructor copy downloads from `dev`; the student copy downloads
 from the student-facing `main` branch. Repository files are used directly during
-local execution.
+local execution. Students complete the loop that applies their sequence functions
+to the combined proteomes; validation, dataframe assembly, and plotting remain
+provided infrastructure.
 
 Both notebooks have been executed from top to bottom in clean local Jupyter
 kernels. The student copy contains no solution implementations or stored feature

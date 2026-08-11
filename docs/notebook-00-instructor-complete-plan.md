@@ -33,17 +33,17 @@ The instructor notebook contains complete code, expected outputs, and teaching n
 
 - SignalP 6.0: <https://services.healthtech.dtu.dk/services/SignalP-6.0/>
 - NetGPI 1.1: <https://services.healthtech.dtu.dk/services/NetGPI-1.1/>
-- ALS1 UniProt entry: <https://www.uniprot.org/uniprotkb/Q5A8T4/entry>
-- PHO84 UniProt entry: <https://www.uniprot.org/uniprotkb/A0A1D8PF54/entry>
+- Als1p UniProt entry: <https://www.uniprot.org/uniprotkb/Q5A8T4/entry>
+- Pho84p UniProt entry: <https://www.uniprot.org/uniprotkb/A0A1D8PF54/entry>
 
 Sequence identities verified through UniProt REST on 2026-08-09:
 
 | Example | UniProt accession | Length | Teaching role |
 | --- | --- | ---: | --- |
-| *C. albicans* ALS1 | `Q5A8T4` | 1,260 aa | Known adhesin with an N-terminal secretion signal, extensive S/T-rich regions, and a C-terminal GPI-anchor signal |
-| *C. albicans* PHO84 | `A0A1D8PF54` | 545 aa | Multi-pass phosphate transporter used as a contrasting non-adhesin membrane protein |
+| *C. albicans* Als1p | `Q5A8T4` | 1,260 aa | Known adhesin with an N-terminal secretion signal, extensive S/T-rich regions, and a C-terminal GPI-anchor signal |
+| *C. albicans* Pho84p | `A0A1D8PF54` | 545 aa | Multi-pass phosphate transporter used as a contrasting non-adhesin membrane protein |
 
-The current UniProt PHO84 sequence contains one `X` at residue 7. Retain and explain it as an unknown amino acid. Both SignalP 6.0 and NetGPI accept `X` in submitted sequences.
+The current UniProt Pho84p sequence contains one `X` at residue 7. Retain and explain it as an unknown amino acid. Both SignalP 6.0 and NetGPI accept `X` in submitted sequences.
 
 The completed morning notebook must embed both full sequences as literal FASTA text. Do not download them during the workshop. The FASTA headers should include the accession, gene, organism, and teaching label.
 
@@ -63,7 +63,7 @@ The completed morning notebook must embed both full sequences as literal FASTA t
 - Explain that these are useful signals rather than universal rules.
 - End with a prediction prompt: what sequence evidence would students look for?
 
-### 3. Examine ALS1 and PHO84 with SignalP and NetGPI — 10:00–10:30
+### 3. Examine Als1p and Pho84p with SignalP and NetGPI — 10:00–10:30
 
 #### Embedded examples
 
@@ -85,16 +85,16 @@ Interpretation prompts:
 
 - Which sequence has a cleavable N-terminal signal peptide?
 - What does “Other” mean in this output?
-- How is a signal peptide different from one of PHO84's transmembrane helices?
+- How is a signal peptide different from one of Pho84p's transmembrane helices?
 - Does a signal peptide prove that a protein is an adhesin?
 
 #### NetGPI activity
 
 Explain before submission that NetGPI expects proteins designated for the secretory pathway and relies on prior signal-peptide evidence. It examines at most the final 100 residues.
 
-- Submit ALS1 using long output for an interpretable graph.
+- Submit Als1p using long output for an interpretable graph.
 - Record the GPI-anchor call, the predicted omega site if present, and the role of the sentinel `*`.
-- Use PHO84 as a reasoning question: based on SignalP and its transporter architecture, should its NetGPI output be treated as meaningful evidence? The default activity should not imply that every protein should be passed blindly from one predictor to the next.
+- Use Pho84p as a reasoning question: based on SignalP and its transporter architecture, should its NetGPI output be treated as meaningful evidence? The default activity should not imply that every protein should be passed blindly from one predictor to the next.
 
 Interpretation prompts:
 
@@ -113,8 +113,8 @@ Include instructor-captured result summaries or screenshots generated shortly be
 - Students write and test `count_occurrences(word, letter)` using only a loop,
   a conditional, and a counter variable.
 - Build `st_frequency(sequence)` from the loop-based counting function and apply
-  it to ALS1 and PHO84.
-- Compare the whole-protein results, then inspect ALS1 by eye for where S/T
+  it to Als1p and Pho84p.
+- Compare the whole-protein results, then inspect Als1p by eye for where S/T
   residues cluster. Introduce the string `.count()` method at this transition.
 - Add a zero-length guard only if it can be explained simply; do not turn the exercise into defensive-programming instruction.
 - Compare results and connect composition back to adhesin architecture.
@@ -134,15 +134,16 @@ Place a clear stopping banner and the next restart point in Markdown.
 - Define the empty- and short-sequence behavior explicitly and simply.
 - Keep `WINDOW_SIZE = 50` visible and global so the class can vary it later.
 - Use supplied code to plot the list against window-midpoint protein positions
-  for ALS1 and PHO84, then report the maximum with `max()`.
+  for Als1p and Pho84p, then report the maximum with `max()`.
 
 ### 7. From two proteins to a table — 12:15–12:30
 
 - Use provided code to download, verify, parse, and combine the frozen
   *S. cerevisiae* and *C. albicans* proteomes.
-- Apply the student-written functions to all 12,103 proteins and collect protein
-  length, whole-protein S/T frequency, and maximum 50-residue-window S/T
-  frequency.
+- Have students complete a scaffolded loop that applies their functions to all
+  12,103 proteins and collects protein length, whole-protein S/T frequency, and
+  maximum 50-residue-window S/T frequency. Keep parsing, row validation,
+  dataframe assembly, and plotting as provided infrastructure.
 - Load the student-safe ID-only view of the 30 validated KN curated positives
   and plot the known-adhesin subset against the entire combined proteome.
 - Ask students to state one observed pattern and one reason it is not a perfect rule.
@@ -166,7 +167,7 @@ Place a clear stopping banner and the next restart point in Markdown.
 
 - Use supplied code to fit one shallow tree with SignalP score and PredGPI binary call.
 - Display the tree with readable feature and class names.
-- Trace ALS1 or another known example through its branches.
+- Trace Als1p or another known example through its branches.
 - Keep FungalRV out of the model and reveal it later only for comparison.
 
 ### 4. Everyone runs and interprets the same model — 1:55–2:20
@@ -227,7 +228,7 @@ Use `.ipynb` as the single source of truth. Keep reusable scientific functions i
 
 ## Build and verification checklist
 
-- Freeze the exact ALS1 and PHO84 FASTA text and source details used in the notebook.
+- Freeze the exact Als1p and Pho84p FASTA text and source details used in the notebook.
 - Capture current SignalP and NetGPI outputs shortly before the workshop.
 - Confirm whether screenshots from the services may be redistributed; otherwise create an instructor-authored summary table.
 - Create the morning instructor notebook and test its timing before deriving a student version.
