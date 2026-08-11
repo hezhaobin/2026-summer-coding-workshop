@@ -1,0 +1,23 @@
+{
+  "tool": "NetGPI",
+  "version": "1.1",
+  "service_url": "https://services.healthtech.dtu.dk/services/NetGPI-1.1/",
+  "job_id": "6A7B3177001D993E593E3C9F",
+  "job_result_url": "https://services.healthtech.dtu.dk/cgi-bin/webface2.cgi?jobid=6A7B3177001D993E593E3C9F",
+  "service_reported_timestamp": "20260811162813",
+  "files_recovered_at": "2026-08-11T09:54:40-05:00",
+  "input_records": [
+    "C_albicans_ALS1",
+    "C_albicans_PHO84"
+  ],
+  "parameters": {
+    "format": "long"
+  },
+  "key_file_sha256": {
+    "20260811-demo-Als1-Pho84-NetGPI-result.html": "2b272414190b447d8785cb46fcfe9f4bc4b117804fd99dfe1566d2aeaa798a41",
+    "output.json": "1aa182c6ec8b50a06c97feacb59ea96d07d4ae0242ff7dc24740a8fdecec6c4b",
+    "prediction-summary.txt": "2c9888a2e5b148a33a23c10ac224c393a4eda8f2e01035d48c7e03bcf7973b73",
+    "als1-position-probabilities.txt": "5678adaded96696088d8f2a64858702979749414e0ecb5b3a4b6e842c3d80e3b",
+    "pho84-position-probabilities.txt": "ef00dec52c4c61909cb467d964ec9d6ece5936ed399a80c035863856993b5bb1"
+  }
+}

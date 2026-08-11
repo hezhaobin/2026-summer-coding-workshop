@@ -1,0 +1,272 @@
+table, th, td {
+  border: 1px solid black;
+}
+html {
+       overflow-y: scroll;
+}
+
+body {
+    padding-right: 0px!important;
+}
+
+.master {
+    margin: 14px 10px 10px 25px;
+}
+
+.master-container {
+    width: auto;
+    overflow: hidden;
+    margin-left: 15px;
+}
+
+.master-cbslogo {
+    width: 30px;
+    float: right;
+}
+
+.header-container {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.header-cbslogo {
+    width: 90px;
+    float: left;
+}
+
+.header-nav {
+    float: left;
+    width: 100%;
+    margin-right: -90px;
+}
+
+.header-nav-inner {
+    margin-right: 90px;
+    /*position: relative;*/
+}
+
+.nav-link {
+    display: block;
+    height: 45px;
+    width: 14.2%;
+    color: #fff;
+    float: left;
+}
+
+.nav-link span {display: none;}
+
+.nav-events {background: #ffcc00 url('/images/m_e0.gif') no-repeat;}
+.nav-events:hover {background: #ffcc00 url('/images/m_e1.gif') no-repeat;}
+.nav-news {background: #33cc66 url('/images/m_n0.gif') no-repeat;}
+.nav-news:hover {background: #33cc66 url('/images/m_n1.gif') no-repeat;}
+.nav-rgroups {background: #FF6633 url('/images/m_rg0.gif') no-repeat;}
+.nav-rgroups:hover {background: #FF6633 url('/images/m_rg1.gif') no-repeat;}
+.nav-services {background: #FF3399 url('/images/m_cps0.gif') no-repeat;}
+.nav-services:hover {background: #FF3399 url('/images/m_cps1.gif') no-repeat;}
+.nav-db {background: #CC3399 url('/images/m_cds0.gif') no-repeat;}
+.nav-db:hover {background: #CC3399 url('/images/m_cds1.gif') no-repeat;}
+.nav-pub {background: #3399CC url('/images/m_pu0.gif') no-repeat;}
+.nav-pub:hover {background: #3399CC url('/images/m_pu1.gif') no-repeat;}
+.nav-edu {background: #996699 url('/images/m_bep0.gif') no-repeat; width: 14.8%}
+.nav-edu:hover {background: #996699 url('/images/m_bep1.gif') no-repeat;}
+
+.nav-staff {background: #339966 url('/images/m_s0.gif') no-repeat;}
+.nav-staff:hover {background: #339966 url('/images/m_s1.gif') no-repeat;}
+.nav-contact {background: #339933 url('/images/m_c0.gif') no-repeat;}
+.nav-contact:hover {background: #339933 url('/images/m_c1.gif') no-repeat;}
+.nav-about {background: #FF9933 url('/images/m_ac0.gif') no-repeat;}
+.nav-about:hover {background: #FF9933 url('/images/m_ac1.gif') no-repeat;}
+.nav-internal {background: #CC0000 url('/images/m_i0.gif') no-repeat;}
+.nav-internal:hover {background: #CC0000 url('/images/m_i1.gif') no-repeat;}
+.nav-bioinfo {background: #993399 url('/images/m_cbt0.gif') no-repeat;}
+.nav-bioinfo:hover {background: #993399 url('/images/m_cbt1.gif') no-repeat;}
+.nav-courses {background: #0066FF url('/images/m_cc0.gif') no-repeat;}
+.nav-courses:hover {background: #0066FF url('/images/m_cc1.gif') no-repeat;}
+.nav-links {background: #9933ff url('/images/m_obl0.gif') no-repeat; width: 14.8%;}
+.nav-links:hover {background: #9933ff url('/images/m_obl1.gif') no-repeat;}
+
+.breadcrumbs {
+    clear: both;
+    padding-top: 10px;
+    font-size: 10px;
+}
+
+.form-group-maininput {
+    max-width: 1000px;
+}
+
+.example-label {
+    margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+    .main-nav-container {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.download-btn {
+    margin-right: 3px;
+}
+
+.main-title {
+    margin-bottom: 40px;
+}
+
+.with-pointer:hover {
+    cursor: pointer;
+}
+
+.alnpre {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
+
+.lyra-aln-sticks {color: #aaa;}
+
+.lyra-aln-loop-H1,
+.lyra-aln-loop-A1 {color: #FF6633;}
+.lyra-aln-loop-H2,
+.lyra-aln-loop-A2 {color: #FF9933;}
+.lyra-aln-loop-H3,
+.lyra-aln-loop-A3 {color: #CC0000;}
+.lyra-aln-loop-K1,
+.lyra-aln-loop-L1,
+.lyra-aln-loop-B1 {color: #3399CC;}
+.lyra-aln-loop-K2,
+.lyra-aln-loop-L2,
+.lyra-aln-loop-B2 {color: #0066FF;}
+.lyra-aln-loop-K3,
+.lyra-aln-loop-L3,
+.lyra-aln-loop-B3 {color: #9933FF;}
+
+.lyra-aln-sticks .lyra-aln-loop-H1,
+.lyra-aln-sticks .lyra-aln-loop-A1 {color: #F2B6A2;}
+.lyra-aln-sticks .lyra-aln-loop-H2,
+.lyra-aln-sticks .lyra-aln-loop-A2 {color: #ECC59E;}
+.lyra-aln-sticks .lyra-aln-loop-H3,
+.lyra-aln-sticks .lyra-aln-loop-A3 {color: #DA8C8C;}
+.lyra-aln-sticks .lyra-aln-loop-K1,
+.lyra-aln-sticks .lyra-aln-loop-L1,
+.lyra-aln-sticks .lyra-aln-loop-B1 {color: #99C0D3;}
+.lyra-aln-sticks .lyra-aln-loop-K2,
+.lyra-aln-sticks .lyra-aln-loop-L2,
+.lyra-aln-sticks .lyra-aln-loop-B2 {color: #9EB8E0;}
+.lyra-aln-sticks .lyra-aln-loop-K3,
+.lyra-aln-sticks .lyra-aln-loop-L3,
+.lyra-aln-sticks .lyra-aln-loop-B3 {color: #C39BEC;}
+
+.lyra-aln-framework-A {color: #909090;}
+.lyra-aln-framework-B {color: #505050;}
+
+.download-btn .btn-group.open .btn {
+    background-color: #CC0000!important;
+    border-color: #b30000!important;
+}
+
+.advanced-select {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom-bullet li {
+    display: block;
+}
+
+.custom-bullet li:before
+{
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e080";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    float: left;
+    margin-top: 4px;
+    margin-left: -17px;
+    color: #CCCCCC;
+}
+
+.gradient-green {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    margin: 0 auto;
+    height: 20px;
+    width: 100px;
+    background: rgb(255,153,51); /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left, #f8f8f8 , rgb(255,153,51)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #f8f8f8, rgb(255,153,51)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #f8f8f8, rgb(255,153,51)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #f8f8f8 , rgb(255,153,51)); /* Standard syntax (must be last) */
+}
+
+.gradient-red {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    margin: 0 auto;
+    height: 20px;
+    width: 100px;
+    background: rgb(255,51,153); /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left, #f8f8f8 , rgb(255,51,153)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #f8f8f8, rgb(255,51,153)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #f8f8f8, rgb(255,51,153)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #f8f8f8 , rgb(255,51,153)); /* Standard syntax (must be last) */
+}
+
+.gradient-blue {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    margin: 0 auto;
+    height: 20px;
+    width: 100px;
+    background: rgb(51,153,204); /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left, #f8f8f8 , rgb(51,153,204)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #f8f8f8, rgb(51,153,204)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #f8f8f8, rgb(51,153,204)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #f8f8f8 , rgb(51,153,204)); /* Standard syntax (must be last) */
+}
+
+.advanced-input-row {
+    color: #aaa;
+}
+
+.advanced-csfit {
+    color: #339933;
+    font-weight: bold;
+}
+
+.advanced-aln-inp {
+    font-family: monospace;
+    /*border-color: #f8f8f8;
+    box-shadow: none;*/
+}
+
+.advanced-aln-static {
+    background-color: #f8f8f8!important;
+    border-color: #f8f8f8;
+    margin-top: 3px;
+    box-shadow: none;
+    cursor: default!important;
+}
+
+.advanced-aln-static:focus {
+    border-color: #f8f8f8;
+    box-shadow: none;
+}
+
+.advanced-inp-container {
+    margin-bottom: 50px;
+}
+
+.pdb-link {
+    font-family: monospace;
+}
+
+.aln-small {
+    font-size: small;
+}

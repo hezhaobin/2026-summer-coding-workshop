@@ -1,0 +1,43 @@
+{
+  "INFO": {
+    "failedjobs": 0,
+    "size": 2
+  },
+  "CSV_FILE": "/services/NetGPI-1.1/tmp/6A7B3177001D993E593E3C9F/output_protein_type.txt",
+  "MATURE_FILE": "/services/NetGPI-1.1/tmp/6A7B3177001D993E593E3C9F/output_mature.fasta",
+  "GFF_FILE": "/services/NetGPI-1.1/tmp/6A7B3177001D993E593E3C9F/output.gff3",
+  "ZIP_FILE": "",
+  "SEQUENCES": {
+    "C_albicans_ALS1": {
+      "pred_text": "S residue omega-site predicted at position 1239.",
+      "likelihood": [
+        0.42851507663726807
+      ],
+      "Amino-acid": "S",
+      "Name": "C_albicans_ALS1",
+      "Plot_eps": "/services/NetGPI-1.1/tmp/6A7B3177001D993E593E3C9F/output_C_albicans_ALS1_plot.eps",
+      "Plot_png": "/services/NetGPI-1.1/tmp/6A7B3177001D993E593E3C9F/output_C_albicans_ALS1_plot.png",
+      "Plot_txt": "/services/NetGPI-1.1/tmp/6A7B3177001D993E593E3C9F/output_C_albicans_ALS1_pred.txt",
+      "Prediction": "GPI-Anchored",
+      "likelihood_texts": [
+        "Omega-site, pos:1239, resdue:S"
+      ]
+    },
+    "C_albicans_PHO84": {
+      "pred_text": "",
+      "likelihood": [
+        0.9853531718254089
+      ],
+      "Amino-acid": "*",
+      "Name": "C_albicans_PHO84",
+      "Plot_eps": "/services/NetGPI-1.1/tmp/6A7B3177001D993E593E3C9F/output_C_albicans_PHO84_plot.eps",
+      "Plot_png": "/services/NetGPI-1.1/tmp/6A7B3177001D993E593E3C9F/output_C_albicans_PHO84_plot.png",
+      "Plot_txt": "/services/NetGPI-1.1/tmp/6A7B3177001D993E593E3C9F/output_C_albicans_PHO84_pred.txt",
+      "Prediction": "Not GPI-Anchored",
+      "likelihood_texts": [
+        "Not GPI-Anchored"
+      ]
+    }
+  },
+  "FORMAT": "long"
+}

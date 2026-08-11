@@ -1,0 +1,4 @@
+## gff-version 3
+C_albicans_ALS1	SignalP-6.0	n-region	1	3	.	.	.	.
+C_albicans_ALS1	SignalP-6.0	h-region	4	14	.	.	.	.
+C_albicans_ALS1	SignalP-6.0	c-region	15	17	.	.	.	.

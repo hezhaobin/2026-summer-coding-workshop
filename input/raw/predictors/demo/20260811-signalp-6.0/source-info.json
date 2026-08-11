@@ -1,0 +1,24 @@
+{
+  "tool": "SignalP",
+  "version": "6.0",
+  "service_url": "https://services.healthtech.dtu.dk/services/SignalP-6.0/",
+  "job_id": "6A7B32B4001D9C70BED792D7",
+  "job_result_url": "https://services.healthtech.dtu.dk/cgi-bin/webface2.cgi?jobid=6A7B32B4001D9C70BED792D7",
+  "service_reported_timestamp": "20260811163328",
+  "files_recovered_at": "2026-08-11T09:54:40-05:00",
+  "input_records": [
+    "C_albicans_ALS1",
+    "C_albicans_PHO84"
+  ],
+  "parameters": {
+    "organism": "eukarya",
+    "mode": "fast",
+    "format": "all"
+  },
+  "key_file_sha256": {
+    "20260811-demo-Als1-Pho84-SignalP-result.html": "abbb4412884b081e06fd4c3d6d34e347b0b020c0bb7f12e8b7b646e2ae381f41",
+    "output.json": "d8cabece4f66502a1a21d0b851fb08eff4e1fffd4c7835f6573fbb77718c98e0",
+    "prediction-results.txt": "6982a542c9f5a25fd6c5acadeef43377a8301e2a61fcc759093488051c6984a0",
+    "all-results.zip": "4326f127310bf2193755ff57fd3c59c73f392c0554ddebd271f60e2424a933b6"
+  }
+}

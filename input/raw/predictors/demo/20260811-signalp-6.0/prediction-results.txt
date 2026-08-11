@@ -1,0 +1,4 @@
+# SignalP-6.0	Organism: Eukarya	Timestamp: 20260811163328
+# ID	Prediction	OTHER	SP(Sec/SPI)	CS Position
+C_albicans_ALS1	SP	0.000236	0.999763	CS pos: 17-18. Pr: 0.9777
+C_albicans_PHO84	OTHER	0.999968	0.000030	

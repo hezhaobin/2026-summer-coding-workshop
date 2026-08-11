@@ -1,0 +1,48 @@
+{
+  "INFO": {
+    "failedjobs": 0,
+    "size": 2
+  },
+  "CSV_FILE": "/services/SignalP-6.0/tmp/6A7B32B4001D9C70BED792D7/prediction_results.txt",
+  "MATURE_FILE": "/services/SignalP-6.0/tmp/6A7B32B4001D9C70BED792D7/processed_entries.fasta",
+  "GFF_FILE": "/services/SignalP-6.0/tmp/6A7B32B4001D9C70BED792D7/output.gff3",
+  "ZIP_FILE": "/services/SignalP-6.0/tmp/6A7B32B4001D9C70BED792D7/output_all_results.zip",
+  "SEQUENCES": {
+    "C_albicans_ALS1": {
+      "Name": "C_albicans_ALS1",
+      "Plot_eps": "/services/SignalP-6.0/tmp/6A7B32B4001D9C70BED792D7/output_C_albicans_ALS1_plot.eps",
+      "Plot_png": "/services/SignalP-6.0/tmp/6A7B32B4001D9C70BED792D7/output_C_albicans_ALS1_plot.png",
+      "Plot_txt": "/services/SignalP-6.0/tmp/6A7B32B4001D9C70BED792D7/output_C_albicans_ALS1_plot.txt",
+      "Prediction": "Signal Peptide (Sec/SPI)",
+      "Likelihood": [
+        0.0002,
+        0.9998
+      ],
+      "Protein_types": [
+        "Other",
+        "Signal Peptide (Sec/SPI)"
+      ],
+      "CS_pos": "Cleavage site between pos. 17 and 18. Probability 0.977737"
+    },
+    "C_albicans_PHO84": {
+      "Name": "C_albicans_PHO84",
+      "Plot_eps": "/services/SignalP-6.0/tmp/6A7B32B4001D9C70BED792D7/output_C_albicans_PHO84_plot.eps",
+      "Plot_png": "/services/SignalP-6.0/tmp/6A7B32B4001D9C70BED792D7/output_C_albicans_PHO84_plot.png",
+      "Plot_txt": "/services/SignalP-6.0/tmp/6A7B32B4001D9C70BED792D7/output_C_albicans_PHO84_plot.txt",
+      "Prediction": "Other",
+      "Likelihood": [
+        1.0,
+        0.0
+      ],
+      "Protein_types": [
+        "Other",
+        "Signal Peptide (Sec/SPI)"
+      ],
+      "CS_pos": ""
+    }
+  },
+  "FORMAT": "all",
+  "ORG": "eukarya",
+  "MODE": "fast",
+  "REGION_GFF_FILE": "/services/SignalP-6.0/tmp/6A7B32B4001D9C70BED792D7/region_output.gff3"
+}

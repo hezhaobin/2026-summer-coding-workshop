@@ -1,0 +1,4 @@
+# NetGPI 1.1	Timestamp: 20260811162813
+# ID	Seq-length	Pred. GPI-Anchored	Omega-site pos.	Likelihood	Amino-acid
+C_albicans_ALS1	1260	GPI-Anchored	1239	0.429	S
+C_albicans_PHO84	545	Not GPI-Anchored	-	0.985	*
